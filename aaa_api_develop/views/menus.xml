@@ -1,0 +1,14 @@
+<odoo>
+    <data>
+        <menuitem
+            id="parent_menu"
+            name="Main Menu"
+        />
+        <menuitem
+            id="child_menu"
+            name="Information"
+            parent="parent_menu"
+            action="action_view_1"
+        />
+    </data>
+</odoo>

@@ -1,0 +1,46 @@
+<odoo>
+    <data>
+        <!--        tree view-->
+        <record id="tree_view_1" model="ir.ui.view">
+            <field name="name">question.information</field>
+            <field name="model">model</field>
+            <field name="arch" type="xml">
+                <tree string="Questions and Answer">
+                    <field name="name"/>
+                    <field name="phone"/>
+                    <field name="email_from"/>
+                    <field name="team_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--        Form View-->
+        <record id="form_view_1" model="ir.ui.view">
+            <field name="name">question.information</field>
+            <field name="model">model</field>
+            <field name="arch" type="xml">
+                <form string="Questions and Answer">
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="phone"/>
+                        </group>
+                        <group>
+                            <field name="email_from"/>
+                            <field name="team_id"/>
+                        </group>
+                    </group>
+
+                </form>
+            </field>
+        </record>
+
+        <!--        Action View-->
+        <record id="action_view_1" model="ir.actions.act_window">
+            <field name="name">Information</field>
+            <field name="res_model">model</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="tree_view_1"/>
+        </record>
+    </data>
+</odoo>
